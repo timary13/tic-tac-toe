@@ -50,6 +50,8 @@ class TicTacToe {
     isFinished() {
         if(this.winner != null || this.isDraw())
             return true;
+        else
+            return false;
     }
 
     getWinner() {
@@ -62,6 +64,7 @@ class TicTacToe {
             return parseInt(acum + item.reduce((acum1, item1) => item1 == null ? acum1 += 1 : acum1 += 0, 0));
         }, 0);
     }
+
     isDraw() {
         console.log("noMoreTurns " + this.noMoreTurns());
         console.log("winner " + this.winner);
